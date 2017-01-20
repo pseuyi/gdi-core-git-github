@@ -6,7 +6,7 @@
 
 		<title>Intro to Git and Github ~ Girl Develop It</title>
 
-		<meta name="description" content="This is the official Girl Develop It Core Intro to Git and GitHub course. Material based on original material by Kim Moir, Daniel Fischer, Aurelia Moser, Carina C. Zona and Izzy Johnston. 
+		<meta name="description" content="This is the official Girl Develop It Core Intro to Git and GitHub course. Material based on original material by Kim Moir, Daniel Fischer, Aurelia Moser, Carina C. Zona and Izzy Johnston.
 
     The course is meant to be taught in a two-hour workshop. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
 		<meta name="author" content="Girl Develop It">
@@ -15,14 +15,14 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdicool.css" id="theme">
+		<link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
 		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -41,10 +41,10 @@
           <img src = "images/gdi_logo_badge.png">
           <h3>Intro to Git and Github</h3>
         </section>
-        
+
         <!-- Welcome-->
         <section>
-          <h3>Welcome!</h3>
+          <h3>Welcome to the Git together!</h3>
           <div class = "left-align">
           <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
           <p class ="green">Some "rules"</p>
@@ -56,500 +56,584 @@
           </ul>
           </div>
         </section>
-        
+
         <section>
-          <h3>Welcome!</h3>
+          <h3>Tell us about yourself!</h3>
           <div class = "left-align">
-          <p class = "blue">Tell us about yourself.</p>
+          <!-- <p class = "blue">Tell us about yourself.</p> -->
           <ul>
-            <li>Who are you?</li>
+            <li>What's your name?</li>
             <li>What do you hope to get out of the class?</li>
-            <li>Who was your favorite character as a child?</li>
+            <li>What is your favorite activity to do on vacation?</li>
           </ul>
           </div>
         </section>
-        
+
         <section>
-          <h3>What we will cover today</h3>
+          <h3>What we will cover in this workshop</h3>
           <ul>
             <li class ="fragment">What is version control and why should we care?</li>
             <li class ="fragment">Basics of git -- the essential commands</li>
+            <li class ="fragment">Command line basics</li>
             <li class ="fragment">"Gitting" social with GitHub</li>
           </ul>
         </section>
-        
+
         <!-- Version control-->
-        <section>
-          <section>
-            <h3>What is version control?</h3>
-            <p>Version control allows you (and your team) to do two powerful things</p>
-            <div class="fragment">
-              <h4>Collaborate</h4>
-              <p>Create anything with other people, from academic papers to entire websites and applications.</p>
-            </div>
-            <div class="fragment">
-              <h4>Track and revert changes</h4>
-              <p>Mistakes happen. Wouldn't it be nice if you could see the changes that have been made and go "back in time" to fix something that went wrong?
-            </div>
-          </section>
-          <section>
-            <h3>Working without Version Control</h3>
-            <img src = "images/no-vc.png" alt = "Trying to make a grocery list with 5 people and no version control"/>
-            <p>The Horror!</p>
-          </section>
-          <section>
-            <h3>Working with Version Control</h3>
-            <img src = "images/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
-            <p>Rainbows and bunny rabbits!</h3>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h3>Brief history of Version Control</h3>
-            <p><span class ="green">1990s</span> -- CVS (Concurrent Version Systems)</p>
-            <p><span class ="green">2000s</span> -- SVN (Apache Subversion)</p>
-            <p><span class ="green">2005</span> -- Git (well, Git)</p>
-          </section>
-          <section>
-            <h3>Version Control Types</h3>
-            <div class="fragment">
-              <h4>Centralized Version Control</h4>
-              <p>Examples: CVS, SVN</p>
-              <p>One central server, each client (person) checks out and merges changes to main server</p>
-            </div>
-            <div class="fragment">
-              <h4>Distributed Version Control</h4>
-              <p>Examples: Git, Mercurial</p>
-              <p>Each client (person) has a local repository, which they can then reconcile with the main server.</p>
-            </div>
-          </section>
-          <section>
-            <h3>Version Control Distribution</h3>
-            <a href = "http://redmonk.com/sogrady/2012/11/05/dvcs-2012/" target="_blank" alt ="Centralized vs Decentralized Version Control: 2010 vs 2012"><img src = "images/subversion-share-2012.png" alt ="Version control share between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
-          </section>
-           <section>
-              <h3>Version Control Distribution Change</h3>
-              <a href = "http://redmonk.com/sogrady/2012/11/05/dvcs-2012/" target="_blank" alt ="Centralized vs Decentralized Version Control: 2010 vs 2012"><img src = "images/subversion-change-2010-2012.png" alt ="Version control distribution share between 2010 and 2012 between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
-            </section>
-        </section>
+      <section>
+          <h3>What is version control?</h3>
+          <p>Version control allows you (and your team) to do two powerful things</p>
+          <div class="fragment">
+            <h4>Collaborate</h4>
+            <p>Create anything with other people, from academic papers to entire websites and applications.</p>
+          </div>
+          <div class="fragment">
+            <h4>Track and revert changes</h4>
+            <p>Mistakes happen. Wouldn't it be nice if you could see the changes that have been made and go "back in time" to fix something that went wrong?
+          </div>
+      </section>
+      <section>
+        <h3>Working without Version Control</h3>
+        <img src = "images/no-vc.png" alt = "Trying to make a grocery list with 5 people and no version control"/>
+        <p>The Horror!</p>
+      </section>
+      <section>
+        <h3>Working with Version Control</h3>
+        <img src = "images/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
+        <p>Beautiful Organization! 😍</h3>
+      </section>
+      <section>
+        <h3>Brief history of Version Control</h3>
+        <p><span class ="green">1990s</span> -- CVS (Concurrent Version Systems)</p>
+        <p><span class ="green">2000s</span> -- SVN (Apache Subversion)</p>
+        <p><span class ="green">2005</span> -- Git (well, Git)</p>
+      </section>
+      <section>
+        <h3>Version Control Types</h3>
+        <div class="fragment">
+          <h4>Centralized Version Control</h4>
+          <p>Examples: CVS, SVN</p>
+          <p>One central server, each client (person) checks out and merges changes to main server</p>
+        </div>
+        <div class="fragment">
+          <h4>Distributed Version Control</h4>
+          <p>Examples: Git, Mercurial</p>
+          <p>Each client (person) has a local repository, which they can then reconcile with the main server.</p>
+        </div>
+      </section>
+      <section>
+        <h3>Version Control Distribution</h3>
+        <a href = "http://redmonk.com/sogrady/2013/12/19/dvcs-and-git-2013/" target="_blank" alt ="Version Control Statistics: 2010, 2012 and 2013"><img src = "images/subversion-share-2013.png" alt ="Version control share between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
+      </section>
+      <section>
+        <h3>Version Control Change</h3>
+        <a href = "http://redmonk.com/sogrady/2013/12/19/dvcs-and-git-2013/" target="_blank" alt ="Version Control Statistics: 2010 vs 2013"><img src = "images/subversion-change-2010-2013.png" alt ="Version control popularity change between 2010 and 2013 between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
+      </section>
         <!-- Git-->
         <section>
           <h3>Intro to Git</h3>
-          <p>Goals of Git Design</p>
+          <p class="blue">Goals of Git Design</p>
           <ul>
             <li>Fast -- add to your team and code base quickly</li>
             <li>Distributed (see slide above) </li>
             <li>Each commit has a corresponding hash (track changes from everyone)</li>
             <li>Everyone has a local copy of the history</li>
           </ul>
+          <p class="blue">Git v Github</p>
+          <ul>
+            <li>Git is a local software on your computer that handles version control</li>
+            <li>Github is a central storage space for repositories where multiple people can interact with</li>
+          </ul>
         </section>
         <!-- Installation and Setup-->
         <section>
-          <section>
-            <h3>Installation and Setup</h3>
-            <a href = "http://git-scm.com/downloads" alt ="Download latest version of Git" target ="_blank">
-              <p>Install git</p>
-              <img src = "images/install-git.png" alt = "Download latest version of Git"/>
-            </a>
-          </section>
-          <section>
-            <h3>Installation and Setup</h3>
-            <p>Setup ssh keys</p>
-            <pre><code contenteditable class ="command-line">
-             $ cd ~/.ssh
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
+          <h3>Before We Start...</h3>
+          <p>Let's download Sublime Text 2 to use as a text editor. If you already use a different text editor for coding, feel free to use that instead (Atom, Brackets, etc - just not a word processor like Microsoft Word)</p>
+          <a href="http://www.sublimetext.com/2" class="roll">Sublime Text 2</a>
+          <p>Open the application and you should see a screen like this:</p>
+          <img src="images/sublime-text.png" alt="Sublime text editor screen" style="height:50%; width:50%" />
+        </section>
+        <section>
+          <h3>Sign up for Github</h3>
+          <p>If you don't have one already, create a GitHub account. We'll need it later on, so keep track of your username and password in case you get logged out.</p>
+          <a href="https://github.com/" class="roll">Github</a><br />
+          <img src="images/github_logo.jpg" alt="Github Social Coding logo" />
+        </section>
+        <section>
+          <h3>Installation and Setup</h3>
+          <a href = "http://git-scm.com/downloads" alt ="Download latest version of Git" target ="_blank">
+            <p>Install git</p>
+            <img src = "images/install-git.png" alt = "Download latest version of Git"/>
+          </a>
+        </section>
+        <section>
+          <h3>Installation and Setup</h3>
+          <p>Setup ssh keys</p>
+          <pre><code contenteditable class ="command-line">
+           $ cd ~/.ssh
+          </code></pre>
+          <pre><code contenteditable class ="command-line">
 $ ssh-keygen -t rsa -C "your_email@example.com"
 # Generating public/private rsa key pair.
 # Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
+          </code></pre>
+          <pre><code contenteditable class ="command-line">
 Enter passphrase (empty for no passphrase): [Type a passphrase]
 # Enter same passphrase again: [Type passphrase again]
-            </code></pre>
-          </section>
-          <section>
-            <h3>Installation and Setup</h3>
-            <p>Get SSH Key</p>
-            <pre><code contenteditable class ="command-line">
-Your identification has been saved in /Users/you/.ssh/id_rsa.
-# Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
-# The key fingerprint is:
+          </code></pre>
+        </section>
+        <section>
+          <h3>Installation and Setup</h3>
+          <p>Get SSH Key</p>
+          <pre><code contenteditable class ="command-line">
+Your identification has been saved in /Users/YOUR_USERNAME/.ssh/id_rsa.
+# Your public key has been saved in /Users/YOUR_USERNAME/.ssh/id_rsa.pub.
+# An example of the key fingerprint is:
 # 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
-            </code></pre>
-          </section>
-          <section>
-            <h3>Installation and Setup</h3>
-            <p>Add SSH Key to Github</p>
-            <img src = "images/add-ssh.png" alt ="Steps to add SSH key to github account"/>
-          </section>
-          <section>
-            <h3>Installation and Setup</h3>
-            <p>Setup name and email in gitconfig</p>
-            <pre><code contenteditable class ="command-line">
+#
+# To find your username to replace YOUR_USERNAME, type:
+$ pwd
+# pwd prints your working directory which should contain your username
+          </code></pre>
+        </section>
+        <section>
+          <h3>Installation and Setup</h3>
+          <p>Add SSH Key to Github</p>
+          <img src = "images/add-ssh.png" alt ="Steps to add SSH key to github account"/>
+        </section>
+        <section>
+          <h3>Installation and Setup</h3>
+          <p>Setup name and email in gitconfig</p>
+          <p>Your name will be visible on your commit history. This can be updated at any time.</p>
+          <pre><code contenteditable class ="command-line">
 $ git config --global user.name "Your Name Here"
 # Sets the default name for git to use when you commit
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
+          </code></pre>
+          <pre><code contenteditable class ="command-line">
 $ git config --global user.email "your_email@example.com"
 # Sets the default email for git to use when you commit
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
+          </code></pre>
+          <pre><code contenteditable class ="command-line">
 $ git config --list
-            </code></pre>
-          </section>
+          </code></pre>
         </section>
         <!-- First commands-->
         <section>
-          <section>
-            <h3>Your first Local Repository</h3>
-            <p>Go to home directory</p>
-            <pre><code contenteditable class ="command-line">
-  cd ~/
-  OR
-  cd Users\username
-            </code></pre>
-            <p>Create a "working directory"</p>
-            <pre><code contenteditable class ="command-line">
-  mkdir my-first-repo
-  cd my-first-repo
-            </code></pre>
-            <p>Initialize repository with Git</p>
-            <pre><code contenteditable class ="command-line">
-  git init
-  git status
-            </code></pre>
-          </section>
-          <section>
-            <h3>Add files</h3>
-            <p>Create a new hello_world.txt file in your new folder</p>
-            <p>Check repo status</p>
-            <pre><code contenteditable class ="command-line">
-  git status
-            </code></pre>
-            <p>Tell Git to track our new file</p>
-            <pre><code contenteditable class ="command-line">
-  git add hello_world.txt
-  git status
-            </code></pre>
-            <p>File is now tracked by Git</p>
-          </section>
-          <section>
-            <h3>Changes and commits</h3>
-            <p>Open hello_world.txt and add some more text</p>
-            <pre><code contenteditable class ="command-line">
-  git status
-            </code></pre>
-            <p>Stage and commit the change</p>
-            <pre><code contenteditable class ="command-line">
-  git add hello_world.txt
-  git commit -m "First commit. Added hello world to repository."
-            </code></pre>
-          </section>
+          <h3>LET'S GIT INIT</h3>
+          <div class ="stretch"><img src="images/git-init.png" /></div>
+        </section>
+        <section>
+          <h3>Your first Local Repository</h3>
+          <p>Go to home directory</p>
+          <pre><code contenteditable class ="command-line">
+$ cd ~/
+# OR
+$ cd Users\username
+          </code></pre>
+          <p>Create a "working directory"</p>
+          <pre><code contenteditable class ="command-line">
+$ mkdir my-first-repo
+$ cd my-first-repo
+          </code></pre>
+          <p>Initialize repository with Git</p>
+          <pre><code contenteditable class ="command-line">
+$ git init
+$ git status
+          </code></pre>
+        </section>
+        <section>
+          <h3>Add files</h3>
+          <p>Create a new hello_world.txt file in your new folder</p>
+          <p>Check repo status</p>
+          <pre><code contenteditable class ="command-line">
+$ git status
+          </code></pre>
+          <p>Tell Git to track our new file</p>
+          <pre><code contenteditable class ="command-line">
+$ git add hello_world.txt
+$ git status
+          </code></pre>
+          <p>File is now tracked by Git</p>
+        </section>
+        <section>
+          <h3>Changes and commits</h3>
+          <p>Open hello_world.txt and add some more text</p>
+          <pre><code contenteditable class ="command-line">
+$ git status
+          </code></pre>
+          <p>Stage and commit the change</p>
+          <pre><code contenteditable class ="command-line">
+$ git add hello_world.txt
+$ git commit -m "First commit. Added hello world to repository."
+          </code></pre>
         </section>
         <!-- Explanation-->
         <section>
-          <section>
-            <h3>What did we just do??</h3>
-            <p>How is this all different than just saving a file?</p>
-            <ul>
-              <li class="fragment">When we <span class ="green">add</span> a new file, we tell Git to add the file to the repository to be tracked</li>
-              <li class="fragment">When we <span class ="green">stage</span> an existing file (also with the keyword 'add'), we are telling Git to track the current state of our file</li>
-              <li class="fragment">A <span class ="green">commit</span> saves changes made to a file, not the file as a whole. The commit will have a 'hash' so we can track which changes were committed when and by whom.</li>
-            
-            </ul>
-          </section>
-          <section>
-            <h3>Look at our progress</h3>
-            <pre><code contenteditable class ="command-line">
-  git log
-            </code></pre>
-            <pre><code contenteditable class ="command-line">
-  commit [HASH HERE]
-  Author: Your name <you@your-email.com>
-  Date:   [DATE HERE]
+          <h3>What did we just do??</h3>
+          <p>How is this all different than just saving a file?</p>
+          <ul>
+            <li class="fragment">When we <span class ="green">add</span> a new file, we tell Git to add the file to the repository to be tracked</li>
+            <li class="fragment">When we <span class ="green">stage</span> an existing file (also with the keyword 'add'), we are telling Git to track the current state of our file</li>
+            <li class="fragment">A <span class ="green">commit</span> saves changes made to a file, not the file as a whole. The commit will have a 'hash' so we can track which changes were committed when and by whom. Commit messages should be brief but descriptive messages about what was changed. Here's a great post on <a href="http://chris.beams.io/posts/git-commit/" class="roll">writing great commit messages</a>.</li>
 
-      First commit. Added hello world to repository.
-              </code></pre>
-          </section>
-          <section>
-            <h3>Look at our progress, visually</h3>
-            <pre><code contenteditable class ="command-line">
-  gitk
+          </ul>
+        </section>
+        <section>
+          <h3>Gitflow</h3>
+          <img src ="images/git-flow.png">
+        </section>
+        <section>
+          <h3>Look at our progress</h3>
+          <pre><code contenteditable class ="command-line">
+$ git log
+          </code></pre>
+          <pre><code contenteditable class ="command-line">
+commit [HASH HERE]
+Author: Your name <you@your-email.com>
+Date:   [DATE HERE]
+
+    First commit. Added hello world to repository.
             </code></pre>
-            <img src = "images/gitk.png" alt ="Image of commits for this curriculum repo"/>
-          </section>
         </section>
         <!-- Undoing changes -->
         <section>
-          <section>
-            <h3>Nobody's Perfect</h3>
-            <h4>Undoing local changes</h4> 
-            <p>If you haven't committed yet</p>
-            <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
-              <pre><code contenteditable class ="command-line">
-  change hello_world.txt
-  git checkout hello_world.txt
-              </code></pre>
-            </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
-          </section>
-          <section>
-            <h3>Nobody's Perfect</h3>
-            <h4>Undoing staged changes</h4> 
-            <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
-              <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git reset HEAD hello_world.txt
-git checkout hello_world.txt
-              </code></pre>
-            </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
-          </section>
-          <section>
-            <h3>Nobody's Perfect</h3>
-            <h4>Undoing staged changes</h4> 
-            <div class = "fragment">
-              <p>Open hello_world.txt and add some new text</p>
-              <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -am "Changing and committing some lines"
-git log --pretty=oneline
-git revert [HASH]
-              </code></pre>
-            </div>
-            <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
-          </section>
-          <section>
-            <h3>Nobody's Perfect</h3>
-            <h4>Remove a file from staging</h4>
-            <p>Create new file my_new_file.txt</p>
-              <pre><code contenteditable class ="command-line">
-git add my_new_file.txt
-git reset my_new_file.txt
-              </code></pre>
-          </section>
-          <section>
-            <h3>Nobody's Perfect</h3>
-            <h4>Delete a file</h4>
-            <p>Create new file my_other_file.txt</p>
+          <h3>Nobody's Perfect</h3>
+          <h4>Undoing local changes</h4>
+          <p>If you haven't committed yet</p>
+          <div class = "fragment">
+            <p>Open hello_world.txt and add some new text</p>
             <pre><code contenteditable class ="command-line">
-git add my_other_file.txt
+$ # change hello_world.txt
+$ git checkout hello_world.txt
             </code></pre>
-            <p>Manually delete your file</p>
-            <pre><code contenteditable class ="command-line">
-git rm my_other_file.txt
-            </code></pre>
-          </section>
+          </div>
+          <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
         </section>
+        <section>
+          <h3>Nobody's Perfect</h3>
+          <h4>Undoing staged changes</h4>
+          <div class = "fragment">
+            <p>Open hello_world.txt and add some new text</p>
+            <pre><code contenteditable class ="command-line">
+$ git add hello_world.txt
+$ git reset HEAD hello_world.txt
+$ git checkout hello_world.txt
+            </code></pre>
+          </div>
+          <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
+        </section>
+        <section>
+          <h3>Nobody's Perfect</h3>
+          <h4>Undoing staged changes</h4>
+          <div class = "fragment">
+            <p>Open hello_world.txt and add some new text</p>
+            <pre><code contenteditable class ="command-line">
+$ git add hello_world.txt
+$ git commit -am "Changing and committing some lines"
+$ git log --pretty=oneline
+$ git revert [HASH]
+            </code></pre>
+          </div>
+          <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
+        </section>
+        <section>
+          <h3>Nobody's Perfect</h3>
+          <h4>Remove a file from staging</h4>
+          <p>Create new file my_new_file.txt</p>
+            <pre><code contenteditable class ="command-line">
+$ git add my_new_file.txt
+$ git reset my_new_file.txt
+            </code></pre>
+        </section>
+        <section>
+          <h3>Nobody's Perfect</h3>
+          <h4>Delete a file</h4>
+          <p>Create new file my_other_file.txt</p>
+          <pre><code contenteditable class ="command-line">
+$ git add my_other_file.txt
+          </code></pre>
+          <p>Manually delete your file</p>
+          <pre><code contenteditable class ="command-line">
+$ git rm my_other_file.txt
+          </code></pre>
+        </section>        
         <!-- Branches-->
         <section>
-          <section>
-            <h3>Branching</h3>
-            <ul>
-              <li>Develop different code on the same base</li>
-              <li>Conduct exploratory work without affecting the work on master branch</li>
-              <li>Incorporate changes to your master branch only when you are ready</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Branching</h3>
-            <p>Create a new branch called version2</p>
-            <pre><code contenteditable class ="command-line">
-git checkout -b version2
-            </code></pre>
-            <p>Add new lines to hello_world.txt</p>
-            <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Adding changes to version 2"
-            </code></pre>
-          </section>
-          <section>
-            <h3>Branching</h3>
-            <h4>Switching branches</h4>
-            <p>See all branches. Branch with * is active</p>
-            <pre><code contenteditable class ="command-line">
-git branch
-            </code></pre>
-            <p>Switch to master and look at hello_world.txt</p>
-            <pre><code contenteditable class ="command-line">
-git checkout master
-            </code></pre>            
-            <p>Switch to version2 and look at hello_world.txt</p>
-            <pre><code contenteditable class ="command-line">
-git checkout version2
-            </code></pre>
-          </section>
+          <h3>Branching</h3>
+          <ul>
+            <li>Develop different code on the same base</li>
+            <li>Conduct exploratory work without affecting the work on master branch</li>
+            <li>Incorporate changes to your master branch only when you are ready</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Branching</h3>
+          <p>Create a new branch called version2</p>
+          <pre><code contenteditable class ="command-line">
+$ git checkout -b version2
+          </code></pre>
+          <p>Add new lines to hello_world.txt</p>
+          <pre><code contenteditable class ="command-line">
+$ git add hello_world.txt
+$ git commit -m "Adding changes to version 2"
+          </code></pre>
+        </section>
+        <section>
+          <h3>Branching</h3>
+          <h4>Switching branches</h4>
+          <p>See all branches. Branch with * is active</p>
+          <pre><code contenteditable class ="command-line">
+$ git branch
+          </code></pre>
+          <p>Switch to master and look at hello_world.txt</p>
+          <pre><code contenteditable class ="command-line">
+$ git checkout master
+          </code></pre>
+          <p>Switch to version2 and look at hello_world.txt</p>
+          <pre><code contenteditable class ="command-line">
+$ git checkout version2
+          </code></pre>
+        </section>
+        <section>
+          <h3>Branching</h3>
+          <h4>Branching flow</h4>
+          <img src = "images/branching-0.png">
+        </section>
+        <section>
+          <h3>Branching</h3>
+          <h4>Branching flow</h4>
+          <img src = "images/branching-1.png">
+        </section>
+        <section>
+          <h3>Branching</h3>
+          <h4>Branching flow</h4>
+          <img src = "images/branching-2.png">
+        </section>
+        <section>
+          <h3>Branching</h3>
+          <h4>Branching flow</h4>
+          <img src = "images/branching-3.png">
+        </section>
+        <section>
+          <h3>Branching</h3>
+          <h4>Branching flow - merging <small>(spoiler)</small></h4>
+          <img src = "images/branching-4.png">
         </section>
         <!-- Merging-->
         <section>
-          <section>
-            <h3>Merging</h3>
-            <h4>Merge to get changes from one branch into another*</h4>
-            <p>Switch to master and merge changes</p>
-            <pre><code contenteditable class ="command-line">
-git checkout master
-git merge version2
-            </code></pre>
-            <p>*rebase is another option, but will not be covered in this workshop</p>
-          </section>
-          <section>
-            <h3>Merging</h3>
-            <h4>Merge conflicts</h4>
-            <p>Change first line in hello_world.txt in master branch</p>
-            <pre><code contenteditable class ="command-line">
-git add hello_world.txt
-git commit -m "Changing first line in master"
-            </code></pre>
-            <p>Change first line in hello_world.txt in version2 branch</p>
-            <pre><code contenteditable class ="command-line">
-git checkout version2
+          <h3>Merging</h3>
+          <h4>Merge to get changes from one branch into another*</h4>
+          <p>Switch to master and merge changes</p>
+          <pre><code contenteditable class ="command-line">
+$ git checkout master
+$ git merge version2
+          </code></pre>
+          <p>*rebase is another option, but will not be covered in this workshop</p>
+        </section>
+        <section>
+          <h3>Merge conflicts</h3>
+          <img src = "images/git-merge.gif" />
+        </section>
+        <section>
+          <h3>Merge conflicts</h3>
+          <img src = "images/git-push-force.jpg" />
+          <p>Don't force a push unless you <i>really</i> know what you are doing</p>
+        </section>
+        <section>
+          <h3>Merging</h3>
+          <h4>Merge conflicts</h4>
+          <p>Change first line in hello_world.txt in master branch</p>
+          <pre><code contenteditable class ="command-line">
+$ git add hello_world.txt
+$ git commit -m "Changing first line in master"
+          </code></pre>
+          <p>Change first line in hello_world.txt in version2 branch</p>
+          <pre><code contenteditable class ="command-line">
+$ git checkout version2
 # open hello_world.txt and change first line
-git add hello_world.txt
-git commit -m "Changing first line in version2"
-            </code></pre>
-          </section>
-          <section>
-            <h3>Merging</h3>
-            <h4>Merge conflicts, cont.</h4>
-            <p>Merge from master into version2</p>
-            <pre><code contenteditable class ="command-line">
-git merge master
-            </code></pre>
-            <p class ="fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
-                       
-          </section>
+$ git add hello_world.txt
+$ git commit -m "Changing first line in version2"
+          </code></pre>
+        </section>
+        <section>
+          <h3>Merging</h3>
+          <h4>Merge conflicts, cont.</h4>
+          <p>Merge from master into version2</p>
+          <pre><code contenteditable class ="command-line">
+$ git merge master
+          </code></pre>
+          <p class ="fragment">You will be notified of a conflict. Go to the file and fix the problem. Then commit your edits.</p>
+          <pre class ="fragment">
+            <code contenteditable class ="command-line">
+$ git merge master
+# Auto-merging hello_world.txt
+# CONFLICT (content): Merge conflict in hello_world.txt
+# Automatic merge failed; fix conflicts and then commit the result.
+            </code>
+          </pre>         
+        </section>
+        <section>
+          <h3>Merging</h3>
+          <h4>Merge conflicts, cont.</h4>
+          <pre>
+            <code>
+#In our txt file:
+<<<<<<< HEAD
+  Hello World! This change was made on my version2 branch
+=======
+  Hello World! This change was made on my master branch, how exciting!
+>>>>>>> master
+  Let's git this together
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h3>Merging</h3>
+          <h4>Resovling merge conflicts</h4>
+          <ol>
+            <li>Manually update the file to keep the desired changes</li>
+            <li>Save your file</li>
+            <li>Stage your changes</li>
+            <li>Commit</li>
+          </ol>
+          <pre>
+            <code contenteditable class ="command-line">
+$ git add hello_world.txt
+$ git commit -m "Merged master fixed conflicts."
+# Recorded resolution for 'hello_world.txt'.
+# [645c4e6] Merged master fixed conflict.
+            </code>
+          </pre>
         </section>
         <!-- GitHub-->
         <section>
-          <section>
-            <h3><a href = "http://www.github.com" alt="GitHub homepage">GitHub</a></h3>
-            <ul>
-              <li class ="fragment">Launched in <span class ="green">2008</span></li>
-              <li class = "fragment">Leader in <span class ="green">Social Coding</span></li>
-              <li class = "fragment">GitHub is a commercial site that allows users to <span class = "green">host Git repositories</span> publicly and privately</li>
-              <li class ="fragment"><span class ="green">Open source projects</span> host or mirror their repositories on GitHub</li>
-              <li class ="fragment"><span class ="green">Post your own code</span> for others to use or contribute to</li>
-              <li class ="fragment">Use and <span class ="green">learn</span> from the code in other people's repositories</li>
-            </ul>
-          </section>
+          <h3>Time to Git Social!</h3>
+          <img src="images/git-daft-punk-1.gif" alt = "gitting social daft punk gif" style="height:40%; width:40%"/>
+          <img src="images/git-daft-punk-2.gif" alt = "gitting social daft punk gif" style="height:40%; width:40%"/>
+        </section>
+        <section>
+          <h3><a href = "http://www.github.com" alt="GitHub homepage">GitHub</a></h3>
+          <ul>
+            <li class ="fragment">Launched in <span class ="green">2008</span></li>
+            <li class = "fragment">Leader in <span class ="green">Social Coding</span></li>
+            <li class = "fragment">GitHub is a commercial site that allows users to <span class = "green">host Git repositories</span> publicly and privately</li>
+            <li class ="fragment"><span class ="green">Open source projects</span> host or mirror their repositories on GitHub</li>
+            <li class ="fragment"><span class ="green">Post your own code</span> for others to use or contribute to</li>
+            <li class ="fragment">Use and <span class ="green">learn</span> from the code in other people's repositories</li>
+          </ul>
         </section>
         <!-- New repository-->
         <section>
-          <section>
-            <h3>GitHub</h3>
-            <h4>Create your first repository</h4>
-            <img src = "images/bootcamp_2_newrepo.jpg" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
-          </section>
-          <section>
-            <h3>GitHub</h3>
-            <h4>Create your first repository</h4>
-            <img src = "images/bootcamp_2_repoinfo.png" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
-          </section>
-          <section>
-            <h3>GitHub</h3>
-            <h4>ReadME</h4>
-            <blockquote>
-              While a README isn't a required part of a GitHub repository, it is a very good idea to have one. READMEs are a great place to describe your project or add some documentation such as how to install or use your project. You might want to include contact information - if your project becomes popular people will want to help you out.
-            </blockquote>
-          </section>
-          <section>
-            <h3>GitHub</h3>
-            <h4>Get Local Repository of GitHub Repo</h4>
-            <pre><code contenteditable class ="command-line">
-cd ../ # Back in root directory
-mkdir hello-github
-cd hello-github
-git init
-git remote add origin git@github.com:username/NAME-OF-REPO
-git pull origin master
-            </code></pre>
-          </section>
-          <section>
-            <h3>GitHub</h3>
-            <h4>Push to GitHub Repo</h4>
-            <p>Edit the ReadMe file
-            <pre><code contenteditable class ="command-line">
-git add README
-git commit -m "Updating readme file"
-git push origin master
-            </code></pre>
-            <p class ="fragment">Go look at your github repo online</p>
-          </section>
-          <section>
-            <h3>GitHub</h3>
-            <h4>Pulling from remote repository</h4>
-            <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
-            <pre><code contenteditable class ="command-line">
+          <h3>GitHub</h3>
+          <h4>Create your first repository</h4>
+          <img src = "images/bootcamp_2_newrepo.jpg" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
+        </section>
+        <section>
+          <h3>GitHub</h3>
+          <h4>Create your first repository</h4>
+          <img src = "images/bootcamp_2_repoinfo.png" alt ="How to create a new repository. Image from https://help.github.com/articles/create-a-repo"/>
+        </section>
+        <section>
+          <h3>GitHub</h3>
+          <h4>ReadME</h4>
+          <blockquote>
+            While a README isn't a required part of a GitHub repository, it is a very good idea to have one. READMEs are a great place to describe your project or add some documentation such as how to install or use your project. You might want to include contact information - if your project becomes popular people will want to help you out.
+          </blockquote>
+        </section>
+        <section>
+          <h3>GitHub</h3>
+          <h4>Get Local Repository of GitHub Repo</h4>
+          <pre><code contenteditable class ="command-line">
+$ cd ../ # Back in root directory
+$ mkdir hello-github
+$ cd hello-github
+$ git init
+$ git remote add origin git@github.com:username/NAME-OF-REPO
+$ git pull origin master
+          </code></pre>
+        </section>
+        <section>
+          <h3>GitHub</h3>
+          <h4>Push to GitHub Repo</h4>
+          <p>Edit the ReadMe file
+          <pre><code contenteditable class ="command-line">
+$ git add README
+$ git commit -m "Updating readme file"
+$ git push origin master
+          </code></pre>
+          <p class ="fragment">Go look at your github repo online</p>
+        </section>
+        <section>
+          <h3>GitHub</h3>
+          <h4>Pulling from remote repository</h4>
+          <p>If you are working with a team, you want to make sure that you have everyone's changes before pushing your changes to the GitHub repo</p>
+          <pre><code contenteditable class ="command-line">
 # Commit local changes
-git commit -m "My latest commit"
+$ git commit -m "My latest commit"
 # Pull changes other people have made
-git pull origin master
+$ git pull origin master
 # Fix any conflicts (see merge conflicts above) and commit
-git commit -m "Fixing merging conflicts"
+$ git commit -m "Fixing merging conflicts"
 # push local changes to GitHub
-git push origin master
-            </code></pre>
-          </section>
+$ git push origin master
+          </code></pre>
         </section>
         <!-- Fork a repository-->
         <section>
-          <section>
-            <h3>Forking</h3>
-            <ul>
-              <li>There are <span class = "green">MILLIONS</span> of public repositories on GitHub</li>
-              <li>If you want to <span class = "green">use</span> or <span class = "green">contribute</span> to a repository, you can fork it.</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Forking</h3>
-            <img src = "images/bootcamp_3_fork.jpg" alt ="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo"/>
-          </section>
-          <section>
-            <h3>Forking</h3>
-            <h4>Cloning</h4>
-            <p>Clone to get a local repository of your fork
-            <pre><code contenteditable class ="command-line">
-cd ../
+          <h3>Forking</h3>
+          <ul>
+            <li>There are <span class = "green">MILLIONS</span> of public repositories on GitHub</li>
+            <li>If you want to <span class = "green">use</span> or <span class = "green">contribute</span> to a repository, you can fork it.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Forking</h3>
+          <img src = "images/bootcamp_3_fork.jpg" alt ="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo"/>
+        </section>
+        <section>
+          <h3>Forking</h3>
+          <h4>Cloning</h4>
+          <p>Clone to get a local repository of your fork
+          <pre><code contenteditable class ="command-line">
+$ cd ../
 
-git clone https://github.com/username/FORKED-REPO-NAME.git
+$ git clone https://github.com/username/FORKED-REPO-NAME.git
 
-cd FORKED-REPO-NAME
+$ cd FORKED-REPO-NAME
 
-git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
+$ git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
 # Assigns the original repository to a remote called "upstream"
 
-git fetch upstream
+$ git fetch upstream
 # Pulls in changes not present in your local repository, without modifying your files
-            </code></pre>
-          </section>
+          </code></pre>
         </section>
         <!-- Pull requests-->
         <section>
-          <section>
-            <h3>Pull Requests</h3>
-            <ul>
-              <li class = "fragment">After you fork and clone a repository all pushed changes will go to your fork</li>
-              <li class = "fragment">These changes will not affect the original repository</li>
-              <li class = "fragment">If you would like to get your changes to be incorporated into the original repo, you can submit a pull request</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Starting a pull request</h3>
-            <img src = "images/click-pull-request.png" alt ="How to initiate a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
-          </section>
-          <section>
-            <h3>Previewing  and sending pull request</h3>
-            <img src = "images/pull-request.png" alt ="How to preview and send a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
-          </section>
-          <section>
-            <h3>Managing pull requests</h3>
-             <p>How to manage pull requests is out of the scope of this short workshop, but you can learn more from the <a href = "https://help.github.com/categories/63/articles" target ="_blank" alt = "Links to tutorials on pull requests and collaboration">Github Collaborating Tutorials</a>
-          </section>
+          <h3>Pull Requests</h3>
+          <ul>
+            <li class = "fragment">After you fork and clone a repository all pushed changes will go to your fork</li>
+            <li class = "fragment">These changes will not affect the original repository</li>
+            <li class = "fragment">If you would like to get your changes to be incorporated into the original repo, you can submit a pull request</li>
+          </ul>
         </section>
-        <!-- -->
+        <section>
+          <h3>Starting a pull request</h3>
+          <img src = "images/click-pull-request.png" alt ="How to initiate a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
+        </section>
+        <section>
+          <h3>Previewing  and sending pull request</h3>
+          <img src = "images/pull-request.png" alt ="How to preview and send a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
+        </section>
+        <section>
+          <h3>Managing pull requests</h3>
+           <p>How to manage pull requests is out of the scope of this short workshop, but you can learn more from the <a href = "https://help.github.com/categories/63/articles" target ="_blank" alt = "Links to tutorials on pull requests and collaboration">Github Collaborating Tutorials</a>
+        </section>
+        <section>
+          <h2>Congrats! You Made it!</h2>
+          <p>You made it through and we'd love to hear what you think!<a href="https://docs.google.com/forms/d/1kiDOjzlHN3FoYbbveW3Syc816L1oILHrfIS6CKrIXt0/viewform"> Please leave some feedback with this 5 minute survey</a></p>
+        </section>
+        <!-- Questions -->
         <section>
           <h2>Questions?</h2>
           <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
