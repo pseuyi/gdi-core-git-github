@@ -56,26 +56,13 @@
           </ul>
           </div>
         </section>
-
-        <section>
-          <h3>Tell us about yourself!</h3>
-          <div class = "left-align">
-          <!-- <p class = "blue">Tell us about yourself.</p> -->
-          <ul>
-            <li>What's your name?</li>
-            <li>What do you hope to get out of the class?</li>
-            <li>What is your favorite activity to do on vacation?</li>
-          </ul>
-          </div>
-        </section>
-
         <section>
           <h3>What we will cover in this workshop</h3>
           <ul>
             <li class ="fragment">What is version control and why should we care?</li>
             <li class ="fragment">Basics of git -- the essential commands</li>
-            <li class ="fragment">Command line basics</li>
-            <li class ="fragment">"Gitting" social with GitHub</li>
+            <li class ="fragment">Using GitHub</li>
+						<li class ="fragment">Github pages</li>
           </ul>
         </section>
 
@@ -91,22 +78,6 @@
             <h4>Track and revert changes</h4>
             <p>Mistakes happen. Wouldn't it be nice if you could see the changes that have been made and go "back in time" to fix something that went wrong?
           </div>
-      </section>
-      <section>
-        <h3>Working without Version Control</h3>
-        <img src = "images/no-vc.png" alt = "Trying to make a grocery list with 5 people and no version control"/>
-        <p>The Horror!</p>
-      </section>
-      <section>
-        <h3>Working with Version Control</h3>
-        <img src = "images/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
-        <p>Beautiful Organization! 😍</h3>
-      </section>
-      <section>
-        <h3>Brief history of Version Control</h3>
-        <p><span class ="green">1990s</span> -- CVS (Concurrent Version Systems)</p>
-        <p><span class ="green">2000s</span> -- SVN (Apache Subversion)</p>
-        <p><span class ="green">2005</span> -- Git (well, Git)</p>
       </section>
       <section>
         <h3>Version Control Types</h3>
@@ -125,81 +96,38 @@
         <h3>Version Control Distribution</h3>
         <a href = "http://redmonk.com/sogrady/2013/12/19/dvcs-and-git-2013/" target="_blank" alt ="Version Control Statistics: 2010, 2012 and 2013"><img src = "images/subversion-share-2013.png" alt ="Version control share between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
       </section>
-      <section>
-        <h3>Version Control Change</h3>
-        <a href = "http://redmonk.com/sogrady/2013/12/19/dvcs-and-git-2013/" target="_blank" alt ="Version Control Statistics: 2010 vs 2013"><img src = "images/subversion-change-2010-2013.png" alt ="Version control popularity change between 2010 and 2013 between Bazaar, CVS, Git, Mercurial and Subversion"/></a>
-      </section>
+
         <!-- Git-->
         <section>
           <h3>Intro to Git</h3>
           <p class="blue">Goals of Git Design</p>
           <ul>
             <li>Fast -- add to your team and code base quickly</li>
-            <li>Distributed (see slide above) </li>
-            <li>Each commit has a corresponding hash (track changes from everyone)</li>
+            <li>Distributed</li>
+            <li>Each commit has a corresponding hash (unique string)</li>
             <li>Everyone has a local copy of the history</li>
           </ul>
-          <p class="blue">Git v Github</p>
+          <p class="blue">Git vs Github</p>
           <ul>
-            <li>Git is a local software on your computer that handles version control</li>
-            <li>Github is a central storage space for repositories where multiple people can interact with</li>
+            <li>Git is an open source version control system you can install locally</li>
+            <li>Github is a central storage space hosting repositories</li>
           </ul>
         </section>
         <!-- Installation and Setup-->
         <section>
           <h3>Before We Start...</h3>
-          <p>Let's download Sublime Text 2 to use as a text editor. If you already use a different text editor for coding, feel free to use that instead (Atom, Brackets, etc - just not a word processor like Microsoft Word)</p>
-          <a href="http://www.sublimetext.com/2" class="roll">Sublime Text 2</a>
-          <p>Open the application and you should see a screen like this:</p>
-          <img src="images/sublime-text.png" alt="Sublime text editor screen" style="height:50%; width:50%" />
-        </section>
-        <section>
-          <h3>Sign up for Github</h3>
-          <p>If you don't have one already, create a GitHub account. We'll need it later on, so keep track of your username and password in case you get logged out.</p>
-          <a href="https://github.com/" class="roll">Github</a><br />
-          <img src="images/github_logo.jpg" alt="Github Social Coding logo" />
-        </section>
-        <section>
-          <h3>Installation and Setup</h3>
-          <a href = "http://git-scm.com/downloads" alt ="Download latest version of Git" target ="_blank">
-            <p>Install git</p>
-            <img src = "images/install-git.png" alt = "Download latest version of Git"/>
-          </a>
-        </section>
-        <section>
-          <h3>Installation and Setup</h3>
-          <p>Setup ssh keys</p>
-          <pre><code contenteditable class ="command-line">
-           $ cd ~/.ssh
-          </code></pre>
-          <pre><code contenteditable class ="command-line">
-$ ssh-keygen -t rsa -C "your_email@example.com"
-# Generating public/private rsa key pair.
-# Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
-          </code></pre>
-          <pre><code contenteditable class ="command-line">
-Enter passphrase (empty for no passphrase): [Type a passphrase]
-# Enter same passphrase again: [Type passphrase again]
-          </code></pre>
-        </section>
-        <section>
-          <h3>Installation and Setup</h3>
-          <p>Get SSH Key</p>
-          <pre><code contenteditable class ="command-line">
-Your identification has been saved in /Users/YOUR_USERNAME/.ssh/id_rsa.
-# Your public key has been saved in /Users/YOUR_USERNAME/.ssh/id_rsa.pub.
-# An example of the key fingerprint is:
-# 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
-#
-# To find your username to replace YOUR_USERNAME, type:
-$ pwd
-# pwd prints your working directory which should contain your username
-          </code></pre>
-        </section>
-        <section>
-          <h3>Installation and Setup</h3>
-          <p>Add SSH Key to Github</p>
-          <img src = "images/add-ssh.png" alt ="Steps to add SSH key to github account"/>
+					<ul>
+						<li>
+							<p class="blue">1. Make sure you have a text editor installed</p>
+							<ul>
+								<li>Atom (atom.io)</li>
+								<li>Sublime Text 2 (sublimetext.com/2)</li>
+								<li>VS Code (code.visualstudio.com/)</li>
+							</ul>
+						</li>
+						<li><p class="blue">2. Sign up for Github (github.com)</p></li>
+						<li><p class="blue">3. Download the latest version of Git (git-scm.com/downloads)</p></li>
+					</ul>
         </section>
         <section>
           <h3>Installation and Setup</h3>
@@ -295,20 +223,8 @@ Date:   [DATE HERE]
     First commit. Added hello world to repository.
             </code></pre>
         </section>
+
         <!-- Undoing changes -->
-        <section>
-          <h3>Nobody's Perfect</h3>
-          <h4>Undoing local changes</h4>
-          <p>If you haven't committed yet</p>
-          <div class = "fragment">
-            <p>Open hello_world.txt and add some new text</p>
-            <pre><code contenteditable class ="command-line">
-$ # change hello_world.txt
-$ git checkout hello_world.txt
-            </code></pre>
-          </div>
-          <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
-        </section>
         <section>
           <h3>Nobody's Perfect</h3>
           <h4>Undoing staged changes</h4>
@@ -317,33 +233,9 @@ $ git checkout hello_world.txt
             <pre><code contenteditable class ="command-line">
 $ git add hello_world.txt
 $ git reset HEAD hello_world.txt
-$ git checkout hello_world.txt
             </code></pre>
           </div>
           <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
-        </section>
-        <section>
-          <h3>Nobody's Perfect</h3>
-          <h4>Undoing staged changes</h4>
-          <div class = "fragment">
-            <p>Open hello_world.txt and add some new text</p>
-            <pre><code contenteditable class ="command-line">
-$ git add hello_world.txt
-$ git commit -am "Changing and committing some lines"
-$ git log --pretty=oneline
-$ git revert [HASH]
-            </code></pre>
-          </div>
-          <p class="fragment">Look at hello_world.txt. Your changes are gone.</p>
-        </section>
-        <section>
-          <h3>Nobody's Perfect</h3>
-          <h4>Remove a file from staging</h4>
-          <p>Create new file my_new_file.txt</p>
-            <pre><code contenteditable class ="command-line">
-$ git add my_new_file.txt
-$ git reset my_new_file.txt
-            </code></pre>
         </section>
         <section>
           <h3>Nobody's Perfect</h3>
@@ -356,7 +248,7 @@ $ git add my_other_file.txt
           <pre><code contenteditable class ="command-line">
 $ git rm my_other_file.txt
           </code></pre>
-        </section>        
+        </section>
         <!-- Branches-->
         <section>
           <h3>Branching</h3>
@@ -365,6 +257,9 @@ $ git rm my_other_file.txt
             <li>Conduct exploratory work without affecting the work on master branch</li>
             <li>Incorporate changes to your master branch only when you are ready</li>
           </ul>
+					<p class="blue">
+						More on using branches: https://www.atlassian.com/git/tutorials/using-branches
+					</p>
         </section>
         <section>
           <h3>Branching</h3>
@@ -394,7 +289,8 @@ $ git checkout master
 $ git checkout version2
           </code></pre>
         </section>
-        <section>
+
+				<section>
           <h3>Branching</h3>
           <h4>Branching flow</h4>
           <img src = "images/branching-0.png">
@@ -470,7 +366,7 @@ $ git merge master
 # CONFLICT (content): Merge conflict in hello_world.txt
 # Automatic merge failed; fix conflicts and then commit the result.
             </code>
-          </pre>         
+          </pre>
         </section>
         <section>
           <h3>Merging</h3>
@@ -535,13 +431,6 @@ $ git commit -m "Merged master fixed conflicts."
         </section>
         <section>
           <h3>GitHub</h3>
-          <h4>ReadME</h4>
-          <blockquote>
-            While a README isn't a required part of a GitHub repository, it is a very good idea to have one. READMEs are a great place to describe your project or add some documentation such as how to install or use your project. You might want to include contact information - if your project becomes popular people will want to help you out.
-          </blockquote>
-        </section>
-        <section>
-          <h3>GitHub</h3>
           <h4>Get Local Repository of GitHub Repo</h4>
           <pre><code contenteditable class ="command-line">
 $ cd ../ # Back in root directory
@@ -586,28 +475,7 @@ $ git push origin master
             <li>If you want to <span class = "green">use</span> or <span class = "green">contribute</span> to a repository, you can fork it.</li>
           </ul>
         </section>
-        <section>
-          <h3>Forking</h3>
-          <img src = "images/bootcamp_3_fork.jpg" alt ="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo"/>
-        </section>
-        <section>
-          <h3>Forking</h3>
-          <h4>Cloning</h4>
-          <p>Clone to get a local repository of your fork
-          <pre><code contenteditable class ="command-line">
-$ cd ../
 
-$ git clone https://github.com/username/FORKED-REPO-NAME.git
-
-$ cd FORKED-REPO-NAME
-
-$ git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
-# Assigns the original repository to a remote called "upstream"
-
-$ git fetch upstream
-# Pulls in changes not present in your local repository, without modifying your files
-          </code></pre>
-        </section>
         <!-- Pull requests-->
         <section>
           <h3>Pull Requests</h3>
@@ -618,21 +486,29 @@ $ git fetch upstream
           </ul>
         </section>
         <section>
-          <h3>Starting a pull request</h3>
-          <img src = "images/click-pull-request.png" alt ="How to initiate a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
-        </section>
-        <section>
-          <h3>Previewing  and sending pull request</h3>
-          <img src = "images/pull-request.png" alt ="How to preview and send a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
-        </section>
-        <section>
           <h3>Managing pull requests</h3>
            <p>How to manage pull requests is out of the scope of this short workshop, but you can learn more from the <a href = "https://help.github.com/categories/63/articles" target ="_blank" alt = "Links to tutorials on pull requests and collaboration">Github Collaborating Tutorials</a>
         </section>
-        <section>
-          <h2>Congrats! You Made it!</h2>
-          <p>You made it through and we'd love to hear what you think!<a href="https://docs.google.com/forms/d/1kiDOjzlHN3FoYbbveW3Syc816L1oILHrfIS6CKrIXt0/viewform"> Please leave some feedback with this 5 minute survey</a></p>
-        </section>
+
+				<!-- Demo -->
+				<section>
+					<h3>Collaboration and Publishing to Github Pages</h3>
+					<p class="blue">
+						https://pages.github.com/
+					</p>
+					<ul>
+						<li>
+							1. Create a repository and setup gh pages
+						</li>
+						<li>
+							2. Clone the repository and create your own branch
+						</li>
+						<li>
+							3. Create a pull request for your work and merge
+						</li>
+					</ul>
+				</section>
+
         <!-- Questions -->
         <section>
           <h2>Questions?</h2>
